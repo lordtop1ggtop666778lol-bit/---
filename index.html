@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SeeHair — барбершоп</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--page:#2a170d;--cream:#fbf3ec;--sky:#7fbfe6;--blue:#4f9fcf;--brown:#6b3f29;--text:#3e2415;--line:rgba(62,36,21,.25);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,#3a2012,var(--page));color:var(--cream);font:400 17px/1.6 Manrope,system-ui,sans-serif}
+.wrap{max-width:1280px;margin:0 auto;padding:0 20px}
+.pole{height:14px;background:repeating-linear-gradient(-45deg,var(--sky) 0 14px,var(--cream) 14px 28px,#a86a45 28px 42px,var(--cream) 42px 56px)}
+header{padding:56px 0 40px}
+h1{font:800 clamp(64px,17vw,132px)/.95 Fraunces,Georgia,serif;margin:0 0 20px;color:var(--cream);letter-spacing:-.02em}
+h1 span{color:var(--sky)}
+.lead{font-size:20px;max-width:30em;margin:0 0 30px;color:#f0e2d6}
+.btn{display:inline-block;background:var(--brown);color:#fff;text-decoration:none;font-weight:600;padding:15px 28px;border-radius:4px}
+.btn:hover,.btn:focus-visible{background:var(--blue);color:#1d1109;outline:3px solid var(--text);outline-offset:3px}
+header .btn{background:var(--sky);color:#1d1109}
+header .btn:hover,header .btn:focus-visible{background:var(--cream);outline-color:var(--cream)}
+.btn.alt{background:transparent;color:var(--brown);border:2px solid var(--brown);padding:13px 26px}
+.btn.alt:hover,.btn.alt:focus-visible{background:var(--blue);color:#1d1109;border-color:var(--blue)}
+.btn.sm{padding:9px 16px;font-size:15px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.panel{color:var(--text);border-radius:18px;padding:40px;margin-bottom:32px;
+background:radial-gradient(circle at 12% 8%,rgba(255,244,230,.55),transparent 40%),linear-gradient(135deg,#e3c9ac,#d1ad86);
+box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:48px;align-items:start}
+main section{padding:8px 0 32px}
+h2{font:600 34px/1.15 Fraunces,Georgia,serif;margin:0 0 22px;color:var(--brown)}
+ul{list-style:none;margin:0;padding:0}
+li{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+li b{font-weight:600}
+li small{display:block;opacity:.75;font-size:15px}
+li em{font:600 20px Fraunces,Georgia,serif;font-style:normal;color:var(--brown);white-space:nowrap}
+.works{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.ph{aspect-ratio:1;border-radius:6px;display:flex;align-items:flex-end;padding:10px;color:#fff;font:600 15px Manrope,sans-serif}
+.p1{background:linear-gradient(160deg,#4f9fcf,#2f6f99)}
+.p2{background:linear-gradient(160deg,#8a5a3f,#4a2a18)}
+.p3{background:linear-gradient(160deg,#a9cfe6,#6ba9cf);color:#3e2415}
+.p4{background:linear-gradient(160deg,#4a2a18,#6b3f29)}
+.p5{background:linear-gradient(160deg,#2f6f99,#8a5a3f)}
+.p6{background:linear-gradient(160deg,#6ba9cf,#4a2a18)}
+.note{font-size:14px;opacity:.7;margin:10px 0 0}
+aside{position:sticky;top:20px;background:rgba(255,248,240,.4);border:1px solid rgba(62,36,21,.25);padding:24px;border-radius:12px}
+aside h2{font-size:28px;margin-bottom:8px}
+.m{padding:18px 0;border-top:1px solid var(--line)}
+.m b{font:600 20px Fraunces,Georgia,serif;color:var(--brown);display:block}
+.m span{display:block;margin:2px 0 12px;font-size:15px;opacity:.85}
+.info{display:grid;gap:14px}
+.info p{margin:0}
+footer{padding:8px 0 36px;font-size:15px;color:#e6d3c4}
+@media (max-width:860px){.panel{padding:22px 18px;border-radius:14px}.layout{grid-template-columns:1fr;gap:16px}aside{position:static}.works{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<div class="pole" aria-hidden="true"></div>
+<header><div class="wrap">
+<h1>See<span>Hair</span></h1>
+<p class="lead">Барбершоп, где стрижку делают под вас, а не по шаблону. Приходите с идеей или с вопросом: подберём форму и объясним, как ухаживать дома.</p>
+<a class="btn" href="#booking">Записаться</a>
+</div></header>
+<div class="wrap">
+<div class="panel layout">
+<main>
+<section>
+<h2>Услуги и цены</h2>
+<ul>
+<li><span><b>Стрижка</b><small>Мытьё головы и укладка в подарок</small></span><em>от 3000 ₽</em></li>
+<li><span><b>Бритьё</b><small>Опасная бритва, горячее полотенце</small></span><em>от 1500 ₽</em></li>
+<li><span><b>Укладка</b><small>Для событий и фотосессий</small></span><em>от 5000 ₽</em></li>
+<li><span><b>Оформление бороды и усов</b><small>Форма, контур, уходовое масло</small></span><em>от 2000 ₽</em></li>
+<li><span><b>Стрижка и борода</b><small>Комплекс, выгоднее, чем по отдельности</small></span><em>от 4500 ₽</em></li>
+<li><span><b>Детская стрижка</b><small>Для мальчиков до 12 лет</small></span><em>от 2000 ₽</em></li>
+</ul>
+</section>
+<section>
+<h2>Примеры работ</h2>
+<div class="works">
+<figure style="margin:0"><div class="ph p1">Фейд</div></figure>
+<figure style="margin:0"><div class="ph p2">Классика</div></figure>
+<figure style="margin:0"><div class="ph p3">Текстура</div></figure>
+<figure style="margin:0"><div class="ph p4">Борода</div></figure>
+<figure style="margin:0"><div class="ph p5">Кроп</div></figure>
+<figure style="margin:0"><div class="ph p6">Укладка</div></figure>
+</div>
+<p class="note">Цветные плитки временные: здесь появятся фото настоящих работ.</p>
+</section>
+<section id="booking">
+<h2>Запись</h2>
+<p style="margin:0 0 22px">Выберите мастера справа или запишитесь сразу. В рабочее время отвечаем в течение часа.</p>
+<div class="btns">
+<a class="btn" href="tel:+79000000000">Позвонить</a>
+<a class="btn alt" href="https://t.me/seehair_demo" target="_blank" rel="noopener">Написать в Telegram</a>
+<a class="btn alt" href="https://wa.me/79000000000" target="_blank" rel="noopener">Написать в WhatsApp</a>
+</div>
+</section>
+<section>
+<h2>Как нас найти</h2>
+<div class="info">
+<p><b>Адрес</b><br>ул. Примерная, 12 (пример, замените на настоящий)</p>
+<p><b>Часы работы</b><br>Каждый день, 10:00–21:00</p>
+<p><b>Телефон</b><br><a href="tel:+79000000000" style="color:var(--brown)">+7 (900) 000-00-00</a></p>
+</div>
+</section>
+</main>
+<aside>
+<h2>Наши мастера</h2>
+<p style="margin:0 0 14px;font-size:15px">Нажмите на кнопку, откроется Telegram с готовым сообщением.</p>
+<div class="m"><b>Артём</b><span>Стрижки, фейды, кроп. Опыт 6 лет</span><a class="btn alt sm" href="https://t.me/seehair_demo?text=Хочу записаться к Артёму" target="_blank" rel="noopener">Записаться к Артёму</a></div>
+<div class="m"><b>Марк</b><span>Бритьё, борода и усы. Опыт 8 лет</span><a class="btn alt sm" href="https://t.me/seehair_demo?text=Хочу записаться к Марку" target="_blank" rel="noopener">Записаться к Марку</a></div>
+<div class="m"><b>Илья</b><span>Укладки, детские стрижки. Опыт 4 года</span><a class="btn alt sm" href="https://t.me/seehair_demo?text=Хочу записаться к Илье" target="_blank" rel="noopener">Записаться к Илье</a></div>
+</aside>
+</div>
+</div>
+<div class="pole" aria-hidden="true"></div>
+<footer><div class="wrap" style="padding-top:20px">© SeeHair. Учебный проект.</div></footer>
+</body>
+</html>
